@@ -1,0 +1,436 @@
+@charset "utf-8";
+html {
+    font-size: 100%;
+}
+/*ホーム-------------------------------------------------------------------------------------*/
+body {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.7;
+    color: black;
+}
+
+/*header-------------------------------------------------------*/
+#home {
+    color: white;
+    background-image: url(../images/main-bg.jpg);
+    background-size: cover;
+    padding-bottom: 16px;
+}
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 4% 3%;
+}
+.main-nav {
+    display: flex;
+    font-size: 1.35rem;
+    margin-top: 10%;
+    list-style: none;
+    
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a:hover {
+    color: gray;
+}
+.page-title {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 3rem;
+}
+
+.page-title-p p{
+    text-align: center;
+    margin: 0 10%;
+    font-size: 1rem;
+}
+
+/*middle----------------------------------------------------*/
+.introduction {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;    
+    margin-bottom: 40px;
+}
+article {
+    width: 72%; 
+    display: flex;
+    flex-direction: column;  
+}
+aside {
+    width: 22%;
+    margin-right: 20px;
+    }
+aside img {
+    max-width: 100%;  
+}
+.sub-title {
+    border-bottom: #0bd 2px solid;
+    font-size: 1.3rem;
+}
+.profile {
+    margin-bottom: 10px;
+}
+.article-top {
+    background-image: url(../images/main-bg.jpg); /*text-alignは親要素に指定、ブロック要素には効かない*/
+    background-color: black;
+    background-blend-mode: hard-light;
+    width: 80%;
+    height: 400px;
+    background-size: cover;
+    text-align: center;
+    margin-left: 10%;
+    margin-bottom: 30px;
+} 
+
+.article-main {
+    margin-left: 25px;
+}
+.introduction-title {
+    color: #fff;
+    padding-top: 170px;
+    font-size: 5rem;
+}
+.sub-menu {
+    margin-bottom: 60px;
+    list-style: none;
+}
+.sub-menu li {
+    border-bottom: 1px #ddd solid;
+}
+.sub-menu a {
+    color: #432;
+    padding: 10px;
+    display: block;
+}
+.sub-menu a:hover {
+    color: #0bd;
+}
+
+
+/*footer-----------------------------------------------------*/
+footer {
+    background: #330000;
+    text-align: center;
+    padding: 10px 0;
+}
+footer p small{
+    color: #fff;
+    font-size: 0.875rem;
+}
+footer p {
+    color: #fff;
+    font-size: 0.875rem;
+}
+footer a:hover {
+    border-bottom: 1px #fff solid;
+}
+/*ホーム終了---------------------------------------------------------------------------------*/
+
+/*記事一覧-----------------------------------------------------------------------------------*/
+/*header------------------------*/
+#home-articlelist {
+    color: white;
+    background-image: url(../images/main-bg.jpg);
+    background-size: cover;
+    padding-bottom: 20px;
+}
+.articlelist-top {
+    text-align: center;
+}
+.articlelist-top h2 {
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.articlelist-top p {
+    font-size: 1.1rem;
+}
+
+/*一覧表---------------------------------------------------*/
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /*ここで.itemの幅は指定されている*/
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+.item {
+    margin: 10px;
+    background-color: aliceblue;
+}
+
+.item img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 3/ 2;
+}
+.item a:hover {
+    background: rgba(0,0,0,0.5);
+    opacity: 1;
+}
+.item a {
+    display: block;
+}
+.item p {
+    padding: 0 10%;
+}
+.item h3 {
+    font-size: 1.15rem;
+}
+
+/*contact------------------------------------------------------------------------------*/
+.form {
+    text-align: center;
+    margin: 50px 0 0;
+}
+
+/*article--------------------------------------------------------------------------------------------------*/
+
+.post-info {
+    position: relative;
+    padding-top: 4px;
+    margin-bottom: 40px;
+}
+.post-date {
+    background: #0bd;
+    border-radius: 50%;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    font-size: 1.625rem;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    padding-top: 10px;    
+}
+.post-date span {
+    font-size: 1rem;
+    border-top: 1px rgba(255, 255, 255, .5) solid;
+    padding-top: 6px;
+    display: block;
+    width: 66%;
+    margin: 0 auto;
+}
+.post-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: normal;
+}
+.post-title, .post-cat {
+    margin-left: 120px;
+}
+.post-img {
+    width: 80%;
+    object-fit: cover;
+    aspect-ratio: 3/ 2;
+}
+.post-article {
+    margin-left: 25px;
+}
+
+/*メディアクエリー-------------------------------------------------------------------------------------*/
+@media (max-width: 600px) {
+
+    /*ホーム-------------------------------------------------------------------------------------*/
+body {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.7;
+    color: black;
+}
+
+/*header-------------------------------------------------------*/
+#home {
+    color: white;
+    background-image: url(../images/main-bg.jpg);
+    background-size: cover;
+    padding-bottom: 16px;
+}
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 4% 3%;
+}
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.35rem;
+    margin-top: 10%;
+    list-style: none;
+    text-align: center;
+    
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a:hover {
+    color: gray;
+}
+.page-title {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 3rem;
+}
+
+.page-title-p p{
+    text-align: center;
+    margin: 0 10%;
+    font-size: 1rem;
+}
+
+/*middle----------------------------------------------------*/
+.introduction {
+    flex-direction: column;
+    margin-top: 30px;    
+    margin-bottom: 40px;
+    padding: 0 15px;
+}
+article {
+    width: 100%; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+aside {
+    width: 100%;
+    }
+aside img {
+    max-width: 100%;  
+}
+.sub-title {
+    border-bottom: #0bd 2px solid;
+    font-size: 1.3rem;
+}
+.profile {
+    margin-bottom: 10px;
+}
+.article-top {
+    background-image: url(../images/main-bg.jpg); /*text-alignは親要素に指定、ブロック要素には効かない*/
+    background-color: black;
+    background-blend-mode: hard-light;
+    width: 80%;
+    height: 200px;
+    background-size: cover;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 30px;
+} 
+
+.article-main {
+    margin-left: 0;
+}
+.introduction-title {
+    color: #fff;
+    padding-top: 70px;
+    font-size: 2.8rem;
+}
+.sub-menu {
+    margin-bottom: 60px;
+    list-style: none;
+}
+.sub-menu li {
+    border-bottom: 1px #ddd solid;
+}
+.sub-menu a {
+    color: #432;
+    padding: 10px;
+    display: block;
+}
+.sub-menu a:hover {
+    color: #0bd;
+}
+
+
+/*footer-----------------------------------------------------*/
+footer {
+    background: #330000;
+    text-align: center;
+    padding: 10px 0;
+}
+footer p small{
+    color: #fff;
+    font-size: 0.875rem;
+}
+footer p {
+    color: #fff;
+    font-size: 0.875rem;
+}
+footer a:hover {
+    border-bottom: 1px #fff solid;
+}
+/*ホーム終了---------------------------------------------------------------------------------*/
+
+/*記事一覧-----------------------------------------------------------------------------------*/
+/*header------------------------*/
+#home-articlelist {
+    color: white;
+    background-image: url(../images/main-bg.jpg);
+    background-size: cover;
+    padding-bottom: 20px;
+}
+.articlelist-top {
+    text-align: center;
+}
+.articlelist-top h2 {
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.articlelist-top p {
+    font-size: 1.1rem;
+}
+
+/*一覧表---------------------------------------------------*/
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /*ここで.itemの幅は指定されている*/
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+.item {
+    margin: 10px;
+    background-color: aliceblue;
+}
+
+.item img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 3/ 2;
+}
+.item a:hover {
+    background: rgba(0,0,0,0.5);
+    opacity: 1;
+}
+.item a {
+    display: block;
+}
+.item p {
+    padding: 0 10%;
+}
+.item h3 {
+    font-size: 1.15rem;
+}
+
+/*contact------------------------------------------------------------------------------*/
+.form {
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+/*投稿---------------------------------------------------*/
+}
